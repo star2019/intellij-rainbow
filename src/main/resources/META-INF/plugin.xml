@@ -1,125 +1,41 @@
-<idea-plugin version="2">
-  <id>zjhmale.rainbow</id>
-  <name>Rainbow</name>
-  <vendor email="zjhmale@gmail.com" url="https://github.com/zjhmale">zjhmale</vendor>
+<idea-plugin>
+    <id>my.rainbow.code.v2.1</id>
+    <name>My Rainbow Code v2.1</name>
+    <version>2.1</version>
+    <vendor email="zjhmale@gmail.com" url="https://github.com/zjhmale">zjhmale</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
       <strong>Rainbow highlighting identifiers and delimiters for IntelliJ IDEA-based IDEs</strong>
     ]]></description>
 
-  <change-notes><![CDATA[
-      <p>1.8.8:</p>
+    <change-notes><![CDATA[
+      <p>2.0.0:</p>
       <ul>
-        <li>Support new version of IntelliJ <a href="https://github.com/zjhmale/intellij-rainbow/issues/16">#16</a></li>
+        <li>Support new version of IntelliJ</li>
       </ul>
-      <p>1.8.6:</p>
-      <ul>
-        <li>Support PHP programming languages</li>
-      </ul>
-      <p>1.8.3:</p>
-      <ul>
-        <li>Support C family languages (C/C++/ObjectiveC)</li>
-      </ul>
-      <p>1.8.0:</p>
-      <ul>
-        <li>Compatible with other IntelliJ Platform Products</li>
-      </ul>
-      <p>1.7.9:</p>
-      <ul>
-        <li>Ignore delimiters in string literal and multiline comment</li>
-      </ul>
-      <p>1.7.6:</p>
-      <ul>
-        <li>Ignore JavaScript multiline comment</li>
-      </ul>
-      <p>1.7.3:</p>
-      <ul>
-        <li>Ignore Haskell multiline comment</li>
-      </ul>
-      <p>1.7.1:</p>
-      <ul>
-        <li>Refactor</li>
-        <li>Ignore Haskell string literal</li>
-      </ul>
-      <p>1.7:</p>
-      <ul>
-        <li>Support for Ruby Elixir Programming Language</li>
-      </ul>
-      <p>1.6:</p>
-      <ul>
-        <li>Ignore kotlin string token</li>
-        <li>Support for Groovy Programming Language</li>
-      </ul>
-      <p>1.5:</p>
-      <ul>
-        <li>Ignore kotlin doc comment block</li>
-        <li>Support for Scala Go Programming Language</li>
-      </ul>
-      <p>1.4:</p>
-      <ul>
-        <li>Ignore Haskell like multiline comments</li>
-        <li>Support for Rust JavaScript Erlang Programming Language</li>
-      </ul>
-      <p>1.3:</p>
-      <ul>
-        <li>Support rainbow highlight for delimiters</li>
-      </ul>
-      <p>1.2:</p>
-      <ul>
-        <li>Do not highlight Ignore next form (#_) in Clojure</li>
-      </ul>
-      <p>1.1:</p>
-      <ul>
-        <li>Support for Kotlin Python Haskell and Agda Programming Language</li>
-      </ul>
-      <p>1.0:</p>
-      <ul>
-        <li>Support for Java and Clojure Programming Language</li>
-      </ul>
-    ]]>
-  </change-notes>
+    ]]></change-notes>
 
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="131"/>
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
 
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <depends>com.intellij.modules.lang</depends>
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-    <annotator language="Clojure" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="JAVA" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="kotlin" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="Python" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="Haskell" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="Agda" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="RUST" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="JavaScript" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="Erlang" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="Scala" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="go" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="Groovy" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="ruby" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="Elixir" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="ObjectiveC" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
-    <annotator language="PHP" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <annotator language="JAVA" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
+    </extensions>
 
-    <applicationConfigurable implementation="zjhmale.rainbow.setting.RainbowConfigurable"/>
-    <applicationService serviceInterface="zjhmale.rainbow.setting.RainbowSettings"
-                        serviceImplementation="zjhmale.rainbow.setting.RainbowSettings"/>
-  </extensions>
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
 
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
 
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
-
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
-
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
 </idea-plugin>
