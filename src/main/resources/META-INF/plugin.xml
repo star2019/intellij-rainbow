@@ -25,6 +25,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <annotator language="JAVA" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
+        <annotator language="Groovy" implementationClass="zjhmale.rainbow.RainbowHighliter"/>
     </extensions>
 
     <application-components>

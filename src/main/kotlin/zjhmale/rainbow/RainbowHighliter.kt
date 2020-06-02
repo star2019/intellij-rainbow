@@ -156,15 +156,16 @@ class RainbowHighliter : Annotator {
 //                    && type !== JavaTokenType.END_OF_LINE_COMMENT
 //                    && !JavaDocTokenType.ALL_JAVADOC_TOKENS.contains(type)
             
-//            val groovyPredicate = languageID == "Groovy"
+            val groovyPredicate = languageID == "Groovy"
 //                    && !t.startsWith("//")
 //                    && !(t.startsWith("/*") && t.endsWith("*/"))
 //                    && !groovyDocTokens.contains(type.toString())            
             
-//            val kotlinPredicate = languageID == "kotlin"
+            val kotlinPredicate = languageID == "kotlin"
 //                    && !t.startsWith("//")
 //                    && !(t.startsWith("/*") && t.endsWith("*/"))
 //                    && !kotlinDocTokens.contains(type.toString())
+            
 //            val clojurePredicate = languageID == "Clojure"
 //                    && !t.startsWith(";")
 //                    && !t.startsWith("#_")
